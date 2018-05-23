@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+
+    
+    <!--配置默认首页-->
+    <welcome-file-list>
+        <welcome-file>/centerhomepage.jsp</welcome-file>
+    </welcome-file-list>
+    <!--注册 判断用户名是否存在-->
+    <servlet>
+        <servlet-name>regServlet</servlet-name>
+        <servlet-class>cn.com.servletBMS.servlet.reguserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>regServlet</servlet-name>
+        <url-pattern>/checkUserisexist</url-pattern>
+    </servlet-mapping>
+    <!--注册 按注册按钮后插入数据库并且跳转页面-->
+    <servlet>
+        <servlet-name>regsubmitServlet</servlet-name>
+        <servlet-class>cn.com.servletBMS.servlet.regsubmitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>regsubmitServlet</servlet-name>
+        <url-pattern>/regsubmit</url-pattern>
+    </servlet-mapping>
+
+    <!--登陆 检查登录用户是否存在-->
+    <servlet>
+        <servlet-name>CheckloginUserServlet</servlet-name>
+        <servlet-class>cn.com.servletBMS.servlet.CheckloginUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckloginUserServlet</servlet-name>
+        <url-pattern>/CheckloginUser</url-pattern>
+    </servlet-mapping>
+    <!--登陆 检查登录用户输入的密码是否正确-->
+    <servlet>
+        <servlet-name>CheckloginPwdServlet</servlet-name>
+        <servlet-class>cn.com.servletBMS.servlet.CheckloginPwdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckloginPwdServlet</servlet-name>
+        <url-pattern>/checkPwdisexist</url-pattern>
+    </servlet-mapping>
+
+    <!--添加商家配置-->
+    <servlet>
+        <servlet-name>AddBusinessServlet</servlet-name>
+        <servlet-class>cn.com.servletBMS.servlet.AddBusinessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddBusinessServlet</servlet-name>
+        <url-pattern>/addBusiness</url-pattern>
+    </servlet-mapping>
+    <!--检查商家添加名字是否重复-->
+    <servlet>
+        <servlet-name>CheckaddBusinessServlet</servlet-name>
+        <servlet-class>cn.com.servletBMS.servlet.CheckaddBusinessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckaddBusinessServlet</servlet-name>
+        <url-pattern>/CheckaddBusiness</url-pattern>
+    </servlet-mapping>
+
+    <!--点击查询按钮查询数据 同时用作显示5条信息的时候用-->
+    <servlet>
+        <servlet-name>SelectByBusinessServlet</servlet-name>
+        <servlet-class>cn.com.servletBMS.servlet.SelectByBusinessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectByBusinessServlet</servlet-name>
+        <url-pattern>/SelectByBusiness</url-pattern>
+    </servlet-mapping>
+
+
+    <!--点击其他按钮翻页(5)-->
+    <servlet>
+        <servlet-name>OtherButServlet</servlet-name>
+        <servlet-class>cn.com.servletBMS.servlet.OtherButServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OtherButServlet</servlet-name>
+        <url-pattern>/OtherBut</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!--点击修改页面的保存按钮更新所有数据-->
+    <servlet>
+        <servlet-name>ModifyBusinessServlet</servlet-name>
+        <servlet-class>cn.com.servletBMS.servlet.ModifyBusinessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModifyBusinessServlet</servlet-name>
+        <url-pattern>/ModifyBusiness</url-pattern>
+    </servlet-mapping>
+
+
+    <!--点击退出登录-->
+    <servlet>
+        <servlet-name>quitLoginServlet</servlet-name>
+        <servlet-class>cn.com.servletBMS.servlet.QuitLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>quitLoginServlet</servlet-name>
+        <url-pattern>/quitLogin</url-pattern>
+    </servlet-mapping>
+
+
+    <!--当点击checkbox的时候更新数据库的标志位-->
+    <servlet>
+        <servlet-name>DeleteBusinessServlet</servlet-name>
+        <servlet-class>cn.com.servletBMS.servlet.UppdateFlgByDeleteBusinessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteBusinessServlet</servlet-name>
+        <url-pattern>/DeleteBusiness</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

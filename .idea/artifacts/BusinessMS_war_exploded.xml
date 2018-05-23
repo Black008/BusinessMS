@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="BusinessMS:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/BusinessMS_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="BusinessMS/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="BusinessMS" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../gson-2.3.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/笔记/软件安装/mysql-connector-java-5.1.42-bin.jar" />
+          <element id="file-copy" path="E:/GYX/工作记录/知润/软件/JDBC包/mysql-connector-java-5.1.42-bin.jar" />
+          <element id="file-copy" path="D:/Tomcat 7.0/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" />
+          <element id="file-copy" path="D:/Tomcat 7.0/webapps/examples/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" />
+          <element id="file-copy" path="E:/GYX/工作记录/知润/软件/gson导包/gson-2.3.jar" />
+          <element id="file-copy" path="D:/tomcat/webapps/examples/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" />
+          <element id="file-copy" path="D:/tomcat/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
